@@ -11,7 +11,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FadeAnimation } from 'src/app/animations/fade.animation';
 import { IHttpContact } from 'src/app/core/models/http-contacts.model';
 import { IHttpGroup } from 'src/app/core/models/http-groups.model';
-import { ContactsService } from 'src/app/core/services/contacts.service';
 import { PopupsNotifierService } from 'src/app/shared/services/popups-notifier.service';
 import {
     MarkFormGroupTouched,
@@ -48,7 +47,15 @@ export class ContactEditPopupComponent implements OnInit {
             firstName: [null, [Validators.required]],
             middleName: [null, [Validators.required]],
             lastName: [null, [Validators.required]],
-            email: [null, [Validators.required]],
+            email: [
+                null,
+                [
+                    Validators.required,
+                    Validators.pattern(
+                        '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'
+                    ),
+                ],
+            ],
             groupId: [null, [Validators.required]],
             notificationsStatus: [false],
         });
@@ -73,8 +80,11 @@ export class ContactEditPopupComponent implements OnInit {
         if (this.form.invalid) {
             MarkFormGroupTouched(this.form.controls);
         } else {
-        this.currentId = null;
-            this.submitted.emit({ ...this.form.value, id: this.contactToEdit.id });
+            this.currentId = null;
+            this.submitted.emit({
+                ...this.form.value,
+                id: this.contactToEdit.id,
+            });
             this.closePopup();
         }
     }
@@ -122,5 +132,4 @@ export class ContactEditPopupComponent implements OnInit {
             this.contactToEdit?.lastName[0].toUpperCase()
         );
     }
-
 }

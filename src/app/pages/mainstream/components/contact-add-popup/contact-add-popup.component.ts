@@ -46,7 +46,15 @@ export class ContactAddPopupComponent implements OnInit {
             firstName: [null, [Validators.required]],
             middleName: [null, [Validators.required]],
             lastName: [null, [Validators.required]],
-            email: [null, [Validators.required]],
+            email: [
+                null,
+                [
+                    Validators.required,
+                    Validators.pattern(
+                        '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'
+                    ),
+                ],
+            ],
             groupId: [null, [Validators.required]],
             notificationsStatus: [false],
         });

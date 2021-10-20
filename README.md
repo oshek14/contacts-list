@@ -1,5 +1,5 @@
 # Contacts List
-## Use Library
+## Run Application
 Run `npm install`.
 
 Run `npm run start:server`.
