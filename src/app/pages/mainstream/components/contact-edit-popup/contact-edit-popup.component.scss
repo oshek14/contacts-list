@@ -1,0 +1,123 @@
+.contact-edit-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .edit-form {
+        position: relative;
+        width: 550px;
+        height: 650px;
+        background-color: white;
+        border: 1px solid gray;
+        padding: 0 40px;
+        box-sizing: border-box;
+
+        .edit-form-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 20px;
+            color: dimgray;
+            font-weight: bold;
+
+            .close-btn:after {
+                display: inline-block;
+                content: "\00d7";
+                font-size: 40px;
+                cursor: pointer;
+            }
+        }
+
+        .edit-form-container {
+            position: relative;
+            display: flex;
+
+            .contact-details-img {
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                background-color: gainsboro;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 50px;
+            }
+
+            form {
+                width: calc(100% - 110px);
+                padding-left: 40px;
+                box-sizing: border-box;
+            }
+
+            .edit-form-label-container {
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+
+            .edit-form-label {
+                font-size: 19px;
+                font-weight: bold;
+                color: dimgray;
+                margin: 14px 0 8px 0;
+            }
+
+            .edit-form-input {
+                width: 100%;
+                padding: 6px 12px;
+                box-sizing: border-box;
+                font-size: 19px;
+            }
+
+            .edit-form-select {
+                width: 100%;
+                padding: 6px 12px;
+                box-sizing: border-box;
+                font-size: 19px;
+
+                option {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: dimgray;
+                }
+            }
+
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin-right: 16px;
+                    width: 22px;
+                    height: 22px;
+                }
+
+                p {
+                    font-size: 18px;
+                    margin-top: 20px;
+                    color: dimgray;
+                }
+            }
+
+            .action-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 16px;
+            }
+
+            .alert-danger {
+                color: tomato;
+                font-size: 14px;
+            }
+        }
+    }
+}

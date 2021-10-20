@@ -1,0 +1,28 @@
+.cl-button {
+    width: 100%;
+    height: 40px;
+    color: dimgray;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 0 16px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: white;
+    -webkit-transition: background-color 100ms ease-out;
+    -moz-transition: background-color 100ms ease-out;
+    -o-transition: background-color 100ms ease-out;
+    transition: background-color 100ms ease-out;
+    -webkit-transition: color 100ms ease-out;
+    -moz-transition: color 100ms ease-out;
+    -o-transition: color 100ms ease-out;
+    transition: color 100ms ease-out;
+}
+
+.cl-button:hover {
+    background-color: whitesmoke;
+}
+
+.cl-button:active {
+    background-color: gray;
+    color: whitesmoke;
+}

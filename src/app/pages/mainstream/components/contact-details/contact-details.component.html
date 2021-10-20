@@ -1,0 +1,31 @@
+<div *ngIf="activeContact" class="contact-details-container">
+    <div class="contact-details-info-container">
+        <div class="contact-details-img">{{initials}}</div>
+        <div class="contact-details-info">
+            <div class="contact-details-info-name">
+                {{activeContact?.firstName}} <br>
+                {{activeContact?.middleName}} <br>
+                {{activeContact?.lastName}} <br>
+            </div>
+            <div class="contact-details-info-contact">
+                <div class="contact-details-info-key">
+                    <p>Email</p> 
+                    <p>Group</p>
+                </div>
+                <div class="contact-details-info-value">
+                    <p>{{activeContact?.email}}</p> 
+                    <p *ngIf="allGroups">{{group}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-details-info-footer">
+        <div>
+            <cl-button text="Share" (click)="share()"></cl-button>
+            <cl-button text="Edit..." (click)="edit()"></cl-button>
+        </div>
+        <div>
+            <cl-button text="Delete" (click)="deleteRecord(activeContact?.id)"></cl-button>
+        </div>
+    </div>
+</div>

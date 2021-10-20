@@ -1,0 +1,20 @@
+<div class="contacts-list-container">
+    <input class="contacts-list-search-input" placeholder="Search..." [(ngModel)]="searchInput" #searchInputElem />
+    <div class="contacts-list-items-conainer">
+        <div class="contacts-list-items">
+            <div *ngFor="let item of groupedContacts | keyvalue">
+                <div class="contacts-list-group">
+                    <h2>{{ item.key.toUpperCase() }}</h2>
+                    <div class="contacts-list-group-item" *ngFor="let contact of item.value"
+                        [ngClass]="{'active': contact.id == activeContact?.id}" (click)="activateContact(contact.id)">
+                        <p>
+                            {{ contact.firstName }} {{ contact.middleName[0] }}.
+                            {{ contact.lastName }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <cl-button class="contacts-list-add-button" text="Add..." (click)="addClicked()"></cl-button>
+</div>

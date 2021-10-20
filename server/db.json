@@ -1,0 +1,55 @@
+{
+  "contacts": [{
+      "id": 1,
+      "firstName": "Omari",
+      "middleName": "Ramaz",
+      "lastName": "Shekriladze",
+      "email": "oshek14@freeuni.edu.ge",
+      "groupId": 1,
+      "notificationsStatus": true
+    },
+    {
+      "id": 2,
+      "firstName": "Tengo",
+      "middleName": "Mungo",
+      "lastName": "Gegechuri",
+      "email": "tgege14@freeuni.edu.ge",
+      "groupId": 2,
+      "notificationsStatus": true
+    },
+    {
+      "id": 3,
+      "firstName": "Avto",
+      "middleName": "Koba",
+      "lastName": "Guruli",
+      "email": "aguru14@freeuni.edu.ge",
+      "groupId": 4,
+      "notificationsStatus": true
+    },
+    {
+      "id": 4,
+      "firstName": "Otari",
+      "middleName": "Vaxo",
+      "lastName": "Gigauri",
+      "email": "ogiga14@freeuni.edu.ge",
+      "groupId": 3,
+      "notificationsStatus": false
+    }
+  ],
+  "groups": [{
+    "id": 1,
+    "name": "family"
+  }, {
+    "id": 2,
+    "name": "friends"
+  }, {
+    "id": 3,
+    "name": "school"
+  }, {
+    "id": 4,
+    "name": "work"
+  }],
+  "biggestId": {
+    "id": 4
+  }
+}

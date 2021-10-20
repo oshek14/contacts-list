@@ -1,0 +1,11 @@
+<div class="contacts-container">
+    <contacts-list [contacts]="allContacts$ | async" [activeContact]="activeContact$ | async" (addClick)="add()">
+    </contacts-list>
+    <contact-details [activeContact]="activeContact$ | async" [allGroups]="allGroups$ | async"
+        (delete)="deleteById($event)" (editClick)="edit($event)"></contact-details>
+    <contact-add-popup [allGroups]="allGroups$ | async" (close)="closeAddPopup()" (submitted)="addSubmitted($event)">
+    </contact-add-popup>
+    <contact-edit-popup [allGroups]="allGroups$ | async" (close)="closeEditPopup()"
+        (submitted)="editSubmitted($event)">
+    </contact-edit-popup>
+</div>

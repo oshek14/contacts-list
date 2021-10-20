@@ -1,0 +1,68 @@
+:host {
+}
+
+.contact-details-container {
+    height: 100%;
+    padding: 30px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-details-info-container {
+    display: flex;
+
+    .contact-details-img {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        background-color:gainsboro;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 80px;
+    }
+
+    .contact-details-info {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 0 40px;
+
+        .contact-details-info-name {
+            font-size: 35px;
+            font-weight: bold;
+            color: gray;
+        }
+
+        .contact-details-info-contact {
+            display: flex;
+            margin-top: 50px;
+
+            .contact-details-info-key {
+                font-size: 20px;
+                color: gray;
+                font-weight: bold;
+                margin-right: 100px;
+            }
+            .contact-details-info-value {
+                font-size: 20px;
+                color: gray;
+            }
+        }
+    }
+}
+
+.contact-details-info-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    div {
+        display: flex;
+    }
+    cl-button {
+        margin-right: 20px;
+    }
+}
